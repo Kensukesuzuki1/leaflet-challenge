@@ -32,8 +32,7 @@ function getColor(Richter) {
 
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson", function (data) {
   function onEachFeature(features, layer) {
-    var popupContent = "<h3>" + features.properties.mag + "on the Richter scale</h3><hr>" +
-    ", it was" + features.properties.depth + "in depth from the surface" + "</h3><hr>" + 
+    var popupContent = "<h3>" + features.properties.mag + " on the Richter scale</h3><hr>" +
     " and was classified as a " + features.properties.type + "</h3><hr>";
     layer.bindPopup(popupContent);
   }
